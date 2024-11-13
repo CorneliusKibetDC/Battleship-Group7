@@ -1,0 +1,119 @@
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%); /* Start off-screen to the right */
+      opacity: 0; /* Start as invisible */
+    }
+    100% {
+      transform: translateX(0); /* Move to its normal position */
+      opacity: 1; /* Fully visible */
+    }
+  }
+  
+  
+  .steps{
+    animation: slideInFromRight 3.3s ease-out forwards;
+    background-color:  #9BBEC8;
+    border-radius: 25px;
+    color: #333;
+    padding: 5px;
+    margin: 20px auto;
+    width: 85%;
+    font-size: 3vh;
+  
+  }
+  .steps h1{
+    text-align: center;
+  }
+  
+  .one{
+    border-radius: 20px;
+    padding: 5px;
+    margin: 10px;
+    background-image: linear-gradient(to bottom right, #DDF2FD, #9bbec8);
+  }
+  
+  .two{
+    border-radius: 20px;
+    padding: 5px;
+    margin: 10px;
+    background-image: linear-gradient(to bottom right, #DDF2FD, #9bbec8);
+  }
+  
+  .three{
+    border-radius: 20px;
+    padding: 5px;
+    margin: 10px;
+    background-image: linear-gradient(to bottom right, #DDF2FD, #9bbec8);
+  }
+  
+  
+  /*battleship styling for the board*/
+  .battleship-board {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  table {
+    border-collapse: collapse;
+    width: 500px;
+    background-color: #fff;
+  }
+  
+  th, td {
+    width: 40px;
+    height: 40px;
+    color: #526d82;
+    border: 1px solid #fff;
+    text-align: center;
+  }
+  
+  th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+  }
+  
+  td {
+    background-color: #e0e0e0;
+  }
+  
+  td:hover {
+    background-color: #d4d4d4;
+  }
+  
+  /* Styling for cells containing ships */
+  .ship {
+    background-color: #164863; /* Dark blue color for ships */
+  }
+  
+  /* Optional: Different color for the first column and row */
+  th:first-child, td:first-child {
+    background-color: #f0f0f0;
+  }
+  
+   /* Styling for hits */
+   .hit {
+    background-color: #526d82; /* Red color for hits */
+  }
+  
+  /* Styling for misses */
+  .miss {
+    background-color: #9DB2BF; /* Blue color for misses */
+  }
+  
+  /* Optional: Different color for the first column and row */
+  th:first-child, td:first-child {
+    background-color: #f0f0f0;
+  }
+  
+  
+  /*button styling*/
+  .bnt-one{
+    padding: 5px;
+    background-color: #dde6ed;
+    border-radius: 5px 10px;
+    border: solid 1px #27374d;
+    font-size: 20px;
+  }
+  
+  
