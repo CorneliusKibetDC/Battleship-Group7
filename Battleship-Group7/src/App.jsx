@@ -4,6 +4,7 @@ import Game from './Components/Game';
 import Steps from './Components/steps';
 import './style.css';
 import './App.css'
+import StartPage from './utils/about';
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -19,6 +20,9 @@ function App() {
 
     return (
         <div className="App">
+            <div> 
+                <StartPage/>
+            </div>
             <div className='steps'>
                 <Steps />
             </div>
