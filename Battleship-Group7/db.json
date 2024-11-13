@@ -47,6 +47,12 @@
       "name": "blessing",
       "email": "mwendwablessingm@gmail.com",
       "password": "blessing123"
+    },
+    {
+      "id": "fb60",
+      "name": "Mbumbuzi",
+      "email": "andrew.ambuka@student.moringaschool.com",
+      "password": "mbumbu"
     }
   ]
 }
