@@ -1,14 +1,4 @@
-.App {
-    
-  background-image: url('batteship1.jpg');
-  /* filter:blur(8px);
-  -webkit-filter: blur(8px); */
-  background-repeat: no-repeat;  /* Prevents repeating the image */
-  background-size: cover;       /* Ensures the image covers the whole page */
-   /* Centers the image */
-  min-height: 100vh;            /* Makes sure the background covers the entire viewport height */
-  overflow-y: hidden;
-}
+
 .game-container {
     display: flex;
     justify-content: space-between; /* Position player and opponent boards at the edges */

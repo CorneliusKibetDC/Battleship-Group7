@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import BattleshipBoard from "./stepOneBoard";
-import BattleshipBoardTwo from "./stepTwoBoard";
-import BattleshipBoardThree from "../stepThreeBoard";
+import BattleshipBoardTwo from "./stepTwoBoardTwo";
+import BattleshipBoardThree from "./stepThreeBoard";
 
 
 function Steps(){
