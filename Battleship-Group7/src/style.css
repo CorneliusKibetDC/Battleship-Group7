@@ -1,0 +1,35 @@
+
+.game-container {
+    display: flex;
+    justify-content: space-between; /* Position player and opponent boards at the edges */
+    align-items: center; /* Vertically center the boards */
+    height: 100vh; /* Take full viewport height */
+    padding: 0 20px; /* Add padding on the sides for spacing */
+  }
+  
+  .board {
+      display: grid;
+      grid-template-columns: repeat(10, 40px);
+      grid-template-rows: repeat(10, 40px);
+      gap: 2px;
+      border: 2px solid #000;
+      
+    }
+    
+    .cell {
+      width: 40px;
+      height: 40px;
+      background-color: lightblue;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+    
+    .cell.hit {
+      background-color: red;
+    }
+    
+    .cell.miss {
+      background-color: rgb(128, 128, 128);
+    }
