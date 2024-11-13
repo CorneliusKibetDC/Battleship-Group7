@@ -1,7 +1,6 @@
 
 import React from "react";
 import "./about.css"; 
-import "./App.css"; // Import the CSS for styling
 
 // Header Component
 function Header() {
