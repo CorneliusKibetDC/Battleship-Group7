@@ -12,9 +12,7 @@
   -webkit-filter: blur(8px); */
   background-repeat: no-repeat;  /* Prevents repeating the image */
   background-size: cover;       /* Ensures the image covers the whole page */
-   /* Centers the image */
-  min-height: 100vh;            /* Makes sure the background covers the entire viewport height */
-  overflow-y: hidden;
+   /* Centers the image */            /* Makes sure the background covers the entire viewport height */
 }
 
 .formWrapper {
@@ -27,7 +25,7 @@
 #name, .formContent input {
     border-radius: 20px;
     border: solid 1px #7b7b85;
-    color: #1a1a1d;
+    color: #0a0a0a;
     font-size: 10px;
     padding: 10px; /* Increased padding for better spacing */
     margin: 5px 0; /* Added margin for spacing between inputs */
@@ -36,9 +34,9 @@
 }
 
 label {
-    font-size: 14px;
+    font-size: 24px;
     margin-bottom: 5px; /* Added margin for space between label and input */
-    color: #1a1a1d;
+    color: #fbfbff;
 }
 
 /* Initially, both forms are hidden */
