@@ -59,7 +59,7 @@ return coordinates;
                 display: "inline-block",
               }}
             >
-              {cell.ship ? ":ship:" : ""}
+              {cell.ship ? "🚢": ""}
             </div>
           ))
         )}
