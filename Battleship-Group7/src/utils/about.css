@@ -1,0 +1,106 @@
+
+.about-container {
+    background-color: #9BBEC8;
+    border-radius: 8px;
+    padding: 20px;
+    width: 85%;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: slideInFromRight 3.2s ease-out forwards; 
+  }
+  
+  .about-container h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .about-container p {
+    font-size: 1.1rem;
+    color: #3B1C32;
+    line-height: 1.5;
+  }
+  
+  .about-container h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .about-container ul {
+    font-size: 1rem;
+    color: #3B1C32;
+    list-style-type: disc;
+    margin-left: 20px;
+    line-height: 1.6;
+  }
+  
+  .about-container li {
+    margin-bottom: 8px;
+  }
+  
+  .about-container ul li:before {
+    content: "•";
+    color: #DDF2FD;
+    font-size: 1.2rem;
+    margin-right: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .about-container {
+      width: 90%;
+      padding: 15px;
+    }
+  
+    .about-container h2 {
+      font-size: 2rem;
+    }
+  
+    .about-container h3 {
+      font-size: 2rem;
+    }
+  
+    .about-container ul {
+      font-size: 1rem;
+    }
+  }
+  
+  .header{
+    text-align: center;
+    font-size: 25px;
+    background-image: #9BBEC8;
+    border-radius: 15px 20px 10px;
+    color: #333;
+    margin: 3px;
+    padding: 1px;
+    position: relative;
+    animation: slideInFromRight 3s ease-out forwards; 
+  }
+  
+  @keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%); /* Start off-screen to the right */
+      opacity: 0; /* Start as invisible */
+    }
+    100% {
+      transform: translateX(0); /* Move to its normal position */
+      opacity: 1; /* Fully visible */
+    }
+  }
+  
+  
+  .navbar{
+    text-align: center;
+    background-image: #9BBEC8;
+    border-radius: 50px 10px 8px;
+    color: #333;
+    padding: 3px;
+    margin: 5px;
+    animation: slideInFromRight 3.1s ease-out forwards; 
+    font-size: 20px
+    
+  }
+  .app{
+    background-color:  #DDF2FD;
+  }
