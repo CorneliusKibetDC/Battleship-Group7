@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { RegisterForm, LogInForm } from './Components/AuthForms'; // Adjust the path as needed
 import Game from './Components/Game';
+import Steps from './Components/steps';
 import './style.css';
+import './App.css'
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -17,6 +19,9 @@ function App() {
 
     return (
         <div className="App">
+            <div className='steps'>
+                <Steps />
+            </div>
             <h1>Battleship Game</h1>
             {isLoggedIn ? (
                 // Render Game component if the user is logged in
