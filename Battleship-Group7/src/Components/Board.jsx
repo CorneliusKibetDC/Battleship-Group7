@@ -12,7 +12,7 @@ function Board({ board, onCellClick, isPlayer }) {
       {board.map((row, rowIndex) =>
         row.map((cell, colIndex) => (
           <Cell
-            key={${rowIndex}-${colIndex}}
+            key={`${rowIndex}-${colIndex}`}
             x={rowIndex}
             y={colIndex}
             cell={cell}
