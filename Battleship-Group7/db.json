@@ -65,6 +65,12 @@
       "name": "lisaa",
       "email": "lisa01@gmail.com",
       "password": "1234"
+    },
+    {
+      "id": "e322",
+      "name": "blessing",
+      "email": "mwendwablessing@gmail.com",
+      "password": "123"
     }
   ]
 }
