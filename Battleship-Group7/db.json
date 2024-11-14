@@ -53,6 +53,18 @@
       "name": "Mbumbuzi",
       "email": "andrew.ambuka@student.moringaschool.com",
       "password": "mbumbu"
+    },
+    {
+      "id": "8ad1",
+      "name": "lisa",
+      "email": "lisa01@gmail.com",
+      "password": "123"
+    },
+    {
+      "id": "56e5",
+      "name": "lisaa",
+      "email": "lisa01@gmail.com",
+      "password": "1234"
     }
   ]
 }

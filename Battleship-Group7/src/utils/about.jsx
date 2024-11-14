@@ -83,7 +83,7 @@ function About() {
 // App Component (Main component)
 function StartPage() {
   return (
-    <div className="app">
+    <div >
       <div className="header">
         <Header />
       </div>
