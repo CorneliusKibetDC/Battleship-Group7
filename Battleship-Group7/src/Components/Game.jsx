@@ -123,9 +123,9 @@ const checkGameOver = () => {
 
   return (
     <>
-    <div style={{ display: "flex", justifyContent: "space-between" }}>
+    <div style={{ display: "flex", justifyContent: "center"}}>
       <div style={{ marginBottom: "20px", textAlign: "center" }}>
-        <h2>{turn === "player" ? "Your Turn" : "Opponent's Turn"}</h2>
+        <h2 style={{color:"blue"}}>{turn === "player" ? "Your Turn       " : "Opponent's Turn       "}</h2>
       </div>
       {phase === "placement" ? (
         <ShipPlacement
