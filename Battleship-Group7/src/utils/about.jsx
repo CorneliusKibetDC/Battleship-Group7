@@ -1,7 +1,6 @@
 
 import React from "react";
 import "./about.css"; 
-import "./App.css"; // Import the CSS for styling
 
 // Header Component
 function Header() {
@@ -84,7 +83,7 @@ function About() {
 // App Component (Main component)
 function StartPage() {
   return (
-    <div className="app">
+    <div >
       <div className="header">
         <Header />
       </div>

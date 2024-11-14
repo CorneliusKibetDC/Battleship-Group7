@@ -8,6 +8,10 @@
       opacity: 1; /* Fully visible */
     }
   }
+
+  .app{
+    background-color:  #DDF2FD;
+  }
   
   
   .steps{
