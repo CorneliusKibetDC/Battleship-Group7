@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './AuthForms.css';
 
+const JSONBIN_URL = 'https://api.jsonbin.io/v3/b/6735a1ccad19ca34f8c9e050';
+const MASTER_KEY = '$2a$10$c1KbZSyXQFZfxp8souXi0ebw3NlgOeb.bC4S8JjAxpb/wcNqrPD5O';
+
 function RegisterForm() {
     const [formData, setFormData] = useState({ name: '', email: '', password: '' });
     const [message, setMessage] = useState('');
@@ -13,27 +16,35 @@ function RegisterForm() {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // Validate empty fields
         if (!formData.name || !formData.email || !formData.password) {
             setMessage('Please fill in all fields.');
             return;
         }
 
         try {
-            const response = await fetch('http://localhost:3001/users', {
-                method: 'POST',
+            const response = await fetch(`${JSONBIN_URL}/latest`, {
+                method: 'GET',
                 headers: {
-                    'Content-Type': 'application/json',
+                    'X-Master-Key': MASTER_KEY,
                 },
-                body: JSON.stringify(formData),
             });
 
-            if (response.ok) {
-                setMessage("User registered successfully!");
-                setFormData({ name: '', email: '', password: '' });
-            } else {
-                setMessage("Failed to register user.");
-            }
+            const data = await response.json();
+            const users = data.record.users || [];
+
+            const updatedUsers = [...users, formData];
+
+            await fetch(JSONBIN_URL, {
+                method: 'PUT',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-Master-Key': MASTER_KEY,
+                },
+                body: JSON.stringify({ users: updatedUsers }),
+            });
+
+            setMessage("User registered successfully!");
+            setFormData({ name: '', email: '', password: '' });
         } catch (error) {
             console.error("Error registering user:", error);
             setMessage("An error occurred while registering.");
@@ -56,6 +67,7 @@ function RegisterForm() {
         </form>
     );
 }
+
 function LogInForm({ onLoginSuccess }) {
     const [formData, setFormData] = useState({ name: '', password: '' });
     const [message, setMessage] = useState('');
@@ -68,15 +80,22 @@ function LogInForm({ onLoginSuccess }) {
     const handleSubmit = async (e) => {
         e.preventDefault();
 
-        // Validate empty fields
         if (!formData.name || !formData.password) {
             setMessage('Please fill in both fields.');
             return;
         }
 
         try {
-            const response = await fetch('http://localhost:3001/users');
-            const users = await response.json();
+            const response = await fetch(`${JSONBIN_URL}/latest`, {
+                method: 'GET',
+                headers: {
+                    'X-Master-Key': MASTER_KEY,
+                },
+            });
+
+            const data = await response.json();
+            const users = data.record.users || [];
+
             const user = users.find(
                 (user) => user.name === formData.name && user.password === formData.password
             );
@@ -106,7 +125,8 @@ function LogInForm({ onLoginSuccess }) {
         </form>
     );
 }
- function AuthForms() {
+
+function AuthForms() {
     const [showLogin, setShowLogin] = useState(false);
 
     return (
@@ -125,4 +145,5 @@ function LogInForm({ onLoginSuccess }) {
         </div>
     );
 }
-export {RegisterForm,LogInForm,AuthForms}
+
+export { RegisterForm, LogInForm, AuthForms };
